@@ -1,25 +1,31 @@
 <!DOCTYPE html>
 <html lang="ar">
 <head>
-    <meta charset="UTF-8">
-    <title>لوحة الطالب</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>التمارين</title>
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <header>
-    <h2>لوحة الطالب</h2>
+    <h2>تمارين الحاسب والرياضيات</h2>
 </header>
 
 <div class="container">
-    <div class="cards">
-        <div class="card">📘 الدروس</div>
-        <div class="card">🧪 الاختبارات</div>
-        <div class="card">📊 النتائج</div>
-    </div>
 
-    <button onclick="logout()">تسجيل الخروج</button>
+    <h3 id="question"></h3>
+
+    <input type="text" id="answer" placeholder="اكتب الإجابة">
+
+    <br><br>
+
+    <button onclick="checkAnswer()">تحقق</button>
+
+    <p id="result"></p>
+
+    <h3 id="score"></h3>
+
 </div>
 
 <script src="script.js"></script>
