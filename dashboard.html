@@ -1,1 +1,82 @@
+<!DOCTYPE html>
+<html lang="ar">
 
+<head>
+<meta charset="UTF-8">
+<title>منصة التمارين</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h2>منصة تمارين الرياضيات والحاسب</h2>
+</header>
+
+<div class="container">
+
+    <!-- اختيار المادة -->
+    <div>
+        <label>اختر المادة:</label>
+        <select id="subject">
+            <option value="all">الكل</option>
+            <option value="math">رياضيات</option>
+            <option value="cs">حاسب</option>
+            <option value="prob">احتمالات</option>
+        </select>
+    </div>
+
+    <br>
+
+    <!-- اختيار عدد الأسئلة -->
+    <div>
+        <label>عدد الأسئلة:</label>
+        <select id="questionCount">
+            <option value="5">5</option>
+            <option value="10">10</option>
+            <option value="20">20</option>
+        </select>
+    </div>
+
+    <br>
+
+    <button onclick="startQuiz()">بدء الاختبار</button>
+
+    <hr>
+
+    <h3 id="question"></h3>
+
+    <input type="text" id="answer" placeholder="اكتب الإجابة">
+
+    <br><br>
+
+    <button onclick="checkAnswer()">تحقق</button>
+
+    <p id="result"></p>
+
+    <h3 id="score"></h3>
+
+    <hr>
+
+    <!-- لوحة إضافة الأسئلة -->
+    <h3>➕ إضافة سؤال جديد</h3>
+
+    <input type="text" id="newQuestion" placeholder="نص السؤال"><br><br>
+    <input type="text" id="newAnswer" placeholder="الإجابة"><br><br>
+
+    <select id="newSubject">
+        <option value="math">رياضيات</option>
+        <option value="cs">حاسب</option>
+        <option value="prob">احتمالات</option>
+    </select>
+
+    <br><br>
+
+    <button onclick="addQuestion()">إضافة السؤال</button>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
